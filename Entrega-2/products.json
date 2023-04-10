@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "title": "Naranja",
+        "description": "Jugasa",
+        "price": 15,
+        "thumbnail": "https://media.istockphoto.com/id/185284489/es/foto/naranja.jpg?s=612x612&w=0&k=20&c=V_kmzGGofV9oTdQMU-SfT4Y9n3q9ksFZliED5O_eYPE=",
+        "code": 3,
+        "stock": 1
+    }
+]
