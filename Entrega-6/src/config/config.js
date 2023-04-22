@@ -1,8 +1,8 @@
 const { connect } = require("mongoose")
 const { Cart } = require('../models/cart.model.js')
 
-let url = `mongodb+srv://admin:123@cluster0.ytp6sst.mongodb.net/products?retryWrites=true&w=majority`
-
+let url =
+//url `mongodb+srv://admin:123@cluster0.ytp6sst.mongodb.net/products?retryWrites=true&w=majority`
 const objConfig = {
     connectDB: async () => {
         try {
