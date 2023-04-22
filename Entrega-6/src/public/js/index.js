@@ -17,7 +17,6 @@ const paginaProductos = () => {
         const result = await product.json()
         return result
     }
-    console.log('AAAAAAAAH')
 
 
 
@@ -74,7 +73,7 @@ const paginaProductos = () => {
         pagina++
         pag.innerHTML = pagina
         const products = await getProduct(2, pagina)
-        console.log(products)
+
         if (!products.products.hasNextPage) {
             btnSiguiente.disabled = true
         }
@@ -88,7 +87,7 @@ const paginaProductos = () => {
         pagina--
         pag.innerHTML = pagina
         const products = await getProduct(2, pagina)
-        console.log(products)
+
         if (!products.products.hasPrevPage) {
             btnAnterior.disabled = true
         }
@@ -104,7 +103,7 @@ const paginaProductos = () => {
     btnAnterior.addEventListener('click', anterior)
 
 }
-if (window.location.href == 'http://localhost:8080/api/viewProducts') {
+if (window.location.href == 'http://localhost:8080/api/viewproducts') {
 
     paginaProductos()
 }
@@ -134,7 +133,7 @@ const addCart = async (pid) => {
 const renderCart = async () => {
 
     const productos = await getCart()
-    console.log(productos)
+
     const list = productos[0].products.map((prod) => {
         return `<div class="card" style="width: 15rem; margin: 5px">
                     <div class="card-body">
@@ -150,7 +149,7 @@ const renderCart = async () => {
     containerCart.innerHTML = list
 
 }
-if (window.location.href == 'http://localhost:8080/api/viewProducts/cart') {
+if (window.location.href == 'http://localhost:8080/api/viewproducts/cart') {
 
     renderCart()
 }

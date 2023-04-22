@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const cartCollection = 'cart'
+const cartCollection = 'carts'
 
 const cartSchema = new mongoose.Schema({
     products: [
@@ -8,7 +8,7 @@ const cartSchema = new mongoose.Schema({
         {
             product: {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: 'products'
+                ref: 'Product'
             },
             quantity: {
                 type: String,

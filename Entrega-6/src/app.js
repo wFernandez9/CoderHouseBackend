@@ -31,4 +31,4 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/products', productRoutes)
 app.use('/api/carts', cartRoutes)
-app.use('/api/viewProducts', viewsRoutes)
+app.use('/api/viewproducts', viewsRoutes)

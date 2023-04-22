@@ -10,7 +10,6 @@ class ProductManger {
         try {
             if (queryList) {
                 const productsParams = await productModel.paginate(query ? { category: query } : {}, { limit: queryList.limit || 10, page: queryList.page || 1 });
-                console.log(productsParams)
                 if (sort === 'asc') {
                     const productsParamas = await productModel.aggregate([
                         {
@@ -71,6 +70,7 @@ class CartManager {
     async getCart() {
         try {
             const cart = await cartModel.find();
+            console.log(cart)
             return JSON.stringify(cart, null, '\t');
         }
         catch (err) {
