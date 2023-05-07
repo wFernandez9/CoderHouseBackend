@@ -41,7 +41,7 @@ const initializePassport = () => {
         }
     }))
 
-    //registro con github
+    //registro con github .
     passport.use('github', new GithubStrategy({
         clientID: 'Iv1.3aae575c748d85f2',
         clientSecret: 'd98dc1cfd7a7548a403d168a44a63d408b00086a',
