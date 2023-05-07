@@ -17,6 +17,10 @@ const session = require('express-session')
 const app = express();
 const PORT = 8080
 
+//
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+//
 
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars');
@@ -28,10 +32,7 @@ console.log(__dirname);
 const server = app.listen(PORT, () => { console.log(`Server listening on ${PORT}`) })
 objConfig.connectDB()
 
-//
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-//
+
 app.use(cookieParser('CoderS3cR3t@'));
 app.use(session({
     secret: 'secretCoder',
